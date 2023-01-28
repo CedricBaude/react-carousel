@@ -20,6 +20,16 @@
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.5s ease-in-out;
+}
+
+.carousel_card-active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: visible;
 }
 
 .card_image {
@@ -35,4 +45,34 @@
     display: flex;
     padding: 40px 30px;
     align-items: flex-end;
+}
+
+.card_title {
+    color: white;
+    font-size: 30px;
+}
+
+.carousel_arrow_left,
+.carousel_arrow_right {
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.carousel_arrow_left {
+    left: 15px;
+}
+
+.carousel_arrow_right {
+    right: 15px;
 }
